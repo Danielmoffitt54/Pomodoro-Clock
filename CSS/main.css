@@ -1,3 +1,116 @@
+button {
+  border: none;
+  border-radius: 4px;
+  color: #f5f5f5;
+  background-color: rgba(8, 8, 8, 0.7);
+  transition: background-color 0.2s ease-in-out;
+}
+button:hover, button:focus {
+  background-color: rgba(215, 215, 215, 0.8);
+}
 
+html, body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(300deg, #f5f5f5, #212121);
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media (min-height: 500px) {
+  body {
+    padding-top: 0;
+    align-items: center;
+  }
+}
+
+.clock {
+  margin: 0 auto;
+  padding: 10px;
+  width: 220px;
+  height: auto;
+  text-align: center;
+  background-color: rgba(34, 33, 32, 0.8);
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.8), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+}
+.clock .progress-radial {
+  display: inline-block;
+  position: relative;
+  font-size: 2.2em;
+  width: 6em;
+  padding-bottom: 6em;
+  border-radius: 50%;
+}
+.clock .progress-radial .overlay {
+  position: absolute;
+  padding-top: 34%;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  border-radius: 50%;
+  background-color: rgba(34, 33, 32, 0.8);
+}
+.clock .progress-radial.session .overlay {
+  color: #f0f032;
+}
+.clock .progress-radial.session {
+  background-color: #f0f032;
+}
+.clock .progress-radial.break .overlay {
+  color: #308a1a;
+}
+.clock .progress-radial.break {
+  background-color: #308a1a;
+}
+
+.session-info, .settings, .controls {
+  color: #f5f5f5;
+}
+
+.settings {
+  border-top: 1px dotted #818181;
+  border-bottom: 1px dotted #818181;
+}
+.settings .time-session, .settings .time-break {
+  display: inline-block;
+  padding: 20px;
+}
+.settings .time-session h6, .settings .time-break h6 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.settings .time-session button, .settings .time-break button {
+  width: 30px;
+}
+.settings .time-session .time-session-display, .settings .time-session .time-break-display, .settings .time-break .time-session-display, .settings .time-break .time-break-display {
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1em;
+}
+.settings .time-session .time-session-display, .settings .time-break .time-session-display {
+  color: #f0f032;
+}
+.settings .time-session .time-break-display, .settings .time-break .time-break-display {
+  color: #308a1a;
+}
+
+.controls {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.controls button {
+  font-size: 0.9em;
+  height: 40px;
+  width: 70px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
 /*# sourceMappingURL=main.css.map */
