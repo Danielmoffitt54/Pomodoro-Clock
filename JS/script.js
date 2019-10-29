@@ -36,7 +36,9 @@ function Clock() {
         mode = "Session", // Keeps track of what mode we're in - session or break
         active = false, // Keeps track of whether the clock is running or not
         _this = this, // Reference to the clock itself.
-        timer; // Reference to the interval that we set up to make the timer run.
+        timer, // Reference to the interval that we set up to make the timer run.
+        startAudio = new Audio("../assets/start.mp3"),
+        endAudio = new Audio("../assets/end.mp3");
 
     //DISPLAY FUNCTIONS
 
@@ -84,7 +86,7 @@ function Clock() {
             return currentValue.replace(/(^|\s)step-\S+/g, " step-" + (100 - parseInt((currentTime / startTime) * 100)));
         });
 
-        // console.log($('.progress-radial').attr('class'));
+        console.log($('.progress-radial').attr('class'));
     }
 
     // Function to display the sessionTime.
@@ -177,10 +179,12 @@ function Clock() {
                     mode = "Break";
                     currentTime = breakTime;
                     startTime = breakTime;
+                    endAudio.play();
                 } else {
                     mode = "Session";
                     currentTime = sessionTime;
                     startTime = sessionTime;
+                    startAudio.play();
                     sessionCount++;
                 }
             }
@@ -208,3 +212,6 @@ function Clock() {
         this.displaySessionCount();
     }
 }
+
+// Radial Setup
+

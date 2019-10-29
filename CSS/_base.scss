@@ -1,6 +1,6 @@
 // Base Partial - Resets, Variables, Mixins, and some utility CSS Classes. (Max 20 lines)
 $color-one: #f0f032;
-$color-two: #308a1a;
+$color-two: #35b315;
 $color-light: #f5f5f5;
 $color-semi-light: #818181;
 $color-semi-dark: #313331;
@@ -9,9 +9,10 @@ $color-highlight: rgba(215, 215, 215, 0.8);
 $color-faded-dark: rgba(34, 33, 32, 0.8);
 $color-faded-black: rgba(8, 8, 8, 0.7);
 
-$card-background-color: $color-faded-dark;
+$card-background-color: $color-dark;
 $main-text-color: $color-light;
-$radial-overlay-color: $color-faded-dark;
+$radial-bg-color: $color-semi-dark;
+$radial-overlay-color: $color-semi-light;
 $radial-session-color: $color-one;
 $radial-break-color: $color-two;
 $dotted-line-border: $color-semi-light;
